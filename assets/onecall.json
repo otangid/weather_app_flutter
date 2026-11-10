@@ -1,0 +1,98 @@
+{
+    "lat": -6.2777,
+    "lon": 107.1532,
+    "timezone": "Asia/Jakarta",
+    "timezone_offset": 25200,
+    "current": {
+        "dt": 1794114970,
+        "sunrise": 1794090251,
+        "sunset": 1794134763,
+        "temp": 36.31,
+        "feels_like": 42.58,
+        "pressure": 1010,
+        "humidity": 47,
+        "dew_point": 23.19,
+        "uvi": 11.94,
+        "clouds": 96,
+        "visibility": 10000,
+        "wind_speed": 3.57,
+        "wind_deg": 73,
+        "wind_gust": 5.88,
+        "weather": [
+            {
+                "id": 804,
+                "main": "Clouds",
+                "description": "overcast clouds",
+                "icon": "04d"
+            }
+        ]
+    },
+    "hourly": [
+        {
+            "dt": 1794114000,
+            "temp": 36.31,
+            "feels_like": 42.58,
+            "pressure": 1010,
+            "humidity": 47,
+            "dew_point": 23.19,
+            "uvi": 11.94,
+            "clouds": 96,
+            "visibility": 10000,
+            "wind_speed": 3.57,
+            "wind_deg": 73,
+            "wind_gust": 5.88,
+            "weather": [
+                {
+                    "id": 804,
+                    "main": "Clouds",
+                    "description": "overcast clouds",
+                    "icon": "04d"
+                }
+            ],
+            "pop": 0
+        }
+    ],
+    "daily": [
+        {
+            "dt": 1794110400,
+            "sunrise": 1794090251,
+            "sunset": 1794134763,
+            "moonrise": 1794086340,
+            "moonset": 1794131760,
+            "moon_phase": 0.97,
+            "summary": "Expect a day of partly cloudy with rain",
+            "temp": {
+                "day": 36.08,
+                "min": 28.84,
+                "max": 37.04,
+                "night": 31.53,
+                "eve": 34.87,
+                "morn": 28.84
+            },
+            "feels_like": {
+                "day": 41.6,
+                "night": 38.53,
+                "eve": 40.37,
+                "morn": 34.93
+            },
+            "pressure": 1010,
+            "humidity": 46,
+            "dew_point": 22.63,
+            "wind_speed": 6.22,
+            "wind_deg": 57,
+            "wind_gust": 6.48,
+            "weather": [
+                {
+                    "id": 500,
+                    "main": "Rain",
+                    "description": "light rain",
+                    "icon": "10d"
+                }
+            ],
+            "clouds": 96,
+            "pop": 0.32,
+            "rain": 0.28,
+            "uvi": 11.94
+        }
+    ]
+}

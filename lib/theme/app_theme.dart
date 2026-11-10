@@ -1,0 +1,100 @@
+import 'package:flutter/cupertino.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:material_ui/material_ui.dart';
+
+var lightColorScheme = const ColorScheme(
+  brightness: Brightness.light,
+  primary: Color(0xFFFE6054),
+  onPrimary: Color(0xFFFBF6F0),
+  primaryContainer: Color(0xFFFFDAD5),
+  onPrimaryContainer: Color(0xFF410002),
+  secondary: Color(0xFFFE6054),
+  onSecondary: Color(0xFFFBF6F0),
+  secondaryContainer: Color(0xFFFFE3DC),
+  onSecondaryContainer: Color(0xFF3B0905),
+  tertiary: Color(0xFF9C7A4D),
+  onTertiary: Color(0xFFFBF6F0),
+  tertiaryContainer: Color(0xFFF1D0A5),
+  onTertiaryContainer: Color(0xFF2E1F05),
+  error: Colors.red,
+  onError: Colors.white,
+  errorContainer: Color(0xFFFFDAD6),
+  onErrorContainer: Color(0xFF410002),
+  surface: Color(0xFFF5E9DD),
+  onSurface: Color(0xFF494949),
+  surfaceDim: Color(0xFFE8DBCD),
+  surfaceBright: Color(0xFFFFF8F1),
+  surfaceContainerLowest: Color(0xFFFFFFFF),
+  surfaceContainerLow: Color(0xFFF9F0E6),
+  surfaceContainer: Color(0xFFF2E5D8),
+  surfaceContainerHigh: Color(0xFFEFE1D3),
+  surfaceContainerHighest: Color(0xFFEAD9C9),
+  onSurfaceVariant: Colors.black,
+  outline: Color(0xFF8A7B70),
+  outlineVariant: Color(0xFFDCCBBE),
+  shadow: Colors.black,
+  scrim: Colors.black,
+  inverseSurface: Color(0xFF352F2A),
+  onInverseSurface: Color(0xFFFBF6F0),
+  inversePrimary: Color(0xFFF1D0A5),
+  surfaceTint: Color(0xFFFE6054),
+);
+
+var darkColorScheme = const ColorScheme(
+  brightness: Brightness.dark,
+  primary: Color(0xFFF1D0A5),
+  onPrimary: Color(0xFF262626),
+  primaryContainer: Color(0xFF4A3A22),
+  onPrimaryContainer: Color(0xFFFFE8CC),
+  secondary: Color(0xFFF1D0A5),
+  onSecondary: Color(0xFF262626),
+  secondaryContainer: Color(0xFF4A3A22),
+  onSecondaryContainer: Color(0xFFFFE8CC),
+  tertiary: Color(0xFFFE6054),
+  onTertiary: Color(0xFF262626),
+  tertiaryContainer: Color(0xFF7A2A23),
+  onTertiaryContainer: Color(0xFFFFDAD5),
+  error: Colors.red,
+  onError: Colors.white,
+  errorContainer: Color(0xFF93000A),
+  onErrorContainer: Color(0xFFFFDAD6),
+  surface: Color(0xFF2A2A2A),
+  onSurface: Color(0xFFF5E9DD),
+  surfaceDim: Color(0xFF1F1F1F),
+  surfaceBright: Color(0xFF3A3A3A),
+  surfaceContainerLowest: Color(0xFF171717),
+  surfaceContainerLow: Color(0xFF202020),
+  surfaceContainer: Color(0xFF252525),
+  surfaceContainerHigh: Color(0xFF2E2E2E),
+  surfaceContainerHighest: Color(0xFF383838),
+  onSurfaceVariant: Colors.white,
+  outline: Color(0xFF8F8A84),
+  outlineVariant: Color(0xFF4A4642),
+  shadow: Colors.black,
+  scrim: Colors.black,
+  inverseSurface: Color(0xFFF5E9DD),
+  onInverseSurface: Color(0xFF2A2A2A),
+  inversePrimary: Color(0xFFFE6054),
+  surfaceTint: Color(0xFFF1D0A5),
+);
+
+ThemeData buildTheme(ColorScheme scheme) {
+  final base = ThemeData(colorScheme: scheme, useMaterial3: true, brightness: scheme.brightness);
+  final textTheme = GoogleFonts.poppinsTextTheme(base.textTheme);
+  return base.copyWith(
+    textTheme: textTheme,
+    scaffoldBackgroundColor: Colors.transparent,
+    pageTransitionsTheme: const PageTransitionsTheme(
+      builders: {
+        TargetPlatform.android: FadeForwardsPageTransitionsBuilder(backgroundColor: Colors.transparent),
+        TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
+      },
+    ),
+    snackBarTheme: SnackBarThemeData(
+      behavior: .fixed,
+      elevation: 0,
+      backgroundColor: scheme.primary,
+      contentTextStyle: textTheme.labelMedium?.copyWith(color: scheme.onPrimary),
+    ),
+  );
+}
